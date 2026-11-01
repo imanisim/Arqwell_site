@@ -216,3 +216,12 @@ body[data-page="home"] .feature-tile-info small{display:block;font-size:9px;colo
 body[data-page="home"] .funding-section{padding-top:76px;padding-bottom:80px}
 @media(max-width:1000px){body[data-page="home"] .feature-rail{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:680px){body[data-page="home"] .spotlight-live{grid-template-columns:1fr;padding:22px;gap:20px}body[data-page="home"] .spotlight-media{width:min(100%,205px);aspect-ratio:4/5}body[data-page="home"] .feature-rail{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}body[data-page="home"] .feature-tile-art{height:145px}body[data-page="home"] .feature-tile-info h3{font-size:19px}body[data-page="home"] .editorial-section{padding-top:60px;padding-bottom:65px}body[data-page="home"] .funding-section{padding-top:58px;padding-bottom:60px}}
+
+/* Homepage ARQWELL Journal spotlight: fixed editorial lead, rotating resources remain below. */
+body[data-page="home"] .publication-spotlight{grid-template-columns:minmax(0,310px) minmax(0,1fr)}
+body[data-page="home"] .publication-cover{width:100%;max-width:310px;aspect-ratio:4/5;background:#193d32;color:#f9f2df;display:flex;flex-direction:column;justify-content:space-between;padding:23px;box-shadow:14px 18px 0 #d4ddcf;min-width:0}
+body[data-page="home"] .publication-cover-top,body[data-page="home"] .publication-cover-bottom{font-size:10px;font-weight:800;letter-spacing:.16em;line-height:1.6}
+body[data-page="home"] .publication-cover-art{font:normal clamp(80px,11vw,132px)/1 Georgia,serif;align-self:center;letter-spacing:-.09em;white-space:nowrap}
+body[data-page="home"] .publication-cover-rule{display:inline-block;width:2px;height:.6em;background:#cf8b69;margin:0 .16em}
+body[data-page="home"] .publication-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}
+@media(max-width:680px){body[data-page="home"] .publication-spotlight{grid-template-columns:1fr}body[data-page="home"] .publication-cover{max-width:225px;box-shadow:8px 10px 0 #d4ddcf;padding:17px}body[data-page="home"] .publication-cover-art{font-size:94px}body[data-page="home"] .publication-actions .button{width:100%}}
