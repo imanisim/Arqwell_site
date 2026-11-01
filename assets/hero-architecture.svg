@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 840" role="img" aria-label="Architectural illustration of a contemporary building made from layered geometric forms">
+ <defs><pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" fill="none" stroke="#5c8378" stroke-width=".65" opacity=".22"/></pattern><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#dbe5d8"/><stop offset="1" stop-color="#c1d1ca"/></linearGradient></defs>
+ <rect width="720" height="840" fill="url(#bg)"/><rect width="720" height="840" fill="url(#grid)"/>
+ <circle cx="519" cy="192" r="149" fill="#e7eab9" opacity=".86"/>
+ <g stroke="#294f48" stroke-width="1.6" stroke-linejoin="round">
+ <path d="M78 667L290 554 624 669 390 797Z" fill="#8bafa0" opacity=".7"/>
+ <path d="M141 400L345 300 564 397 349 516Z" fill="#f4eee0"/>
+ <path d="M141 400L141 650 349 760 349 516Z" fill="#a9c0b4"/>
+ <path d="M349 516L564 397 564 645 349 760Z" fill="#729489"/>
+ <path d="M198 367L338 291 491 367 349 447Z" fill="#d6d8c9"/>
+ <path d="M199 368L199 525 349 607 349 447Z" fill="#e8e4d7"/>
+ <path d="M349 447L491 367 491 534 349 607Z" fill="#a3bcaf"/>
+ <path d="M243 286L349 224 455 277 346 340Z" fill="#e8e5d8"/>
+ <path d="M243 286V407L346 464V340Z" fill="#bccfc3"/>
+ <path d="M346 340L455 277V398L346 464Z" fill="#789c8e"/>
+ <path d="M141 410L349 526 564 409" fill="none" stroke="#e9f2e7" stroke-width="3"/>
+ <path d="M199 380L349 458 491 382" fill="none" stroke="#f8f4e9" stroke-width="3"/>
+ </g>
+ <g stroke="#365b51" stroke-width="1.2" fill="none">
+  <path d="M171 452l155 83v125l-155-85zM171 593l155 83M206 471v125m38-105v124m40-102v126"/>
+  <path d="M376 540l164-92v146l-164 90zM406 524v142m41-165v141m45-163v139"/>
+  <path d="M227 408l91 50v84l-91-49zM254 423v83m32-65v83"/>
+  <path d="M370 469l94-52v98l-94 52zM395 457v99m30-116v98"/>
+  <path d="M270 336l53 29v53l-53-30zM369 356l59-34v57l-59 33z"/>
+ </g>
+ <path d="M154 624l178 96M364 717l181-100" stroke="#eaf5eb" opacity=".7" stroke-width="2"/>
+ <g stroke="#4d7569" stroke-width="1" fill="none" stroke-dasharray="4 5"><path d="M79 399L243 318M594 430v265M119 658h-61V399h58"/><circle cx="593" cy="431" r="4"/><circle cx="60" cy="398" r="4"/></g>
+ <g font-family="Arial,sans-serif" fill="#3b6155" font-size="12" letter-spacing="2"><text x="59" y="359">01 / RESEARCH</text><text x="462" y="111">AEC FUTURES</text><text x="82" y="749">STUDIES IN FORM + SYSTEM</text></g>
+ <g fill="#d47b53"><circle cx="109" cy="282" r="5"/><path d="M104 282h-35" stroke="#d47b53" stroke-width="2"/></g>
+</svg>

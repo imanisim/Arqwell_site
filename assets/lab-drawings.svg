@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 700" role="img" aria-label="Architectural study of arches, proportion, and model fragments">
+<defs><pattern id="p" width="27" height="27" patternUnits="userSpaceOnUse"><path d="M27 0H0V27" fill="none" stroke="#98b19e" stroke-width=".7" opacity=".5"/></pattern></defs>
+<rect width="650" height="700" fill="#d2dcd0"/><rect width="650" height="700" fill="url(#p)"/>
+<circle cx="420" cy="241" r="182" fill="#e2e4b3"/>
+<g fill="none" stroke="#496b59" stroke-width="1.7"><path d="M141 548V272a176 176 0 0 1 352 0v276Z"/><path d="M185 548V272a132 132 0 0 1 264 0v276Z"/><path d="M229 548V272a88 88 0 0 1 176 0v276Z"/><path d="M273 548V272a44 44 0 0 1 88 0v276Z"/></g>
+<path d="M273 548V272a44 44 0 0 1 88 0v276Z" fill="#315c4c"/>
+<g fill="#e8eadb" stroke="#496b59" stroke-width="1.4"><path d="M104 548H538v37H104z"/><path d="M86 585H557v24H86z"/></g>
+<path d="M82 610h484" stroke="#496b59" stroke-width="1.8"/>
+<g fill="none" stroke="#729384" stroke-width="1" stroke-dasharray="4 5"><path d="M141 170V72M493 170V72M141 85h352M76 547H42V272h34"/></g>
+<g fill="#466a59" font-family="Arial,sans-serif" font-size="12" letter-spacing="2"><text x="176" y="69">STUDY 04 — PROPORTION</text><text x="65" y="648">DRAWN / INVESTIGATED / SHARED</text></g>
+</svg>
