@@ -225,3 +225,33 @@ body[data-page="home"] .publication-cover-art{font:normal clamp(80px,11vw,132px)
 body[data-page="home"] .publication-cover-rule{display:inline-block;width:2px;height:.6em;background:#cf8b69;margin:0 .16em}
 body[data-page="home"] .publication-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}
 @media(max-width:680px){body[data-page="home"] .publication-spotlight{grid-template-columns:1fr}body[data-page="home"] .publication-cover{max-width:225px;box-shadow:8px 10px 0 #d4ddcf;padding:17px}body[data-page="home"] .publication-cover-art{font-size:94px}body[data-page="home"] .publication-actions .button{width:100%}}
+
+/* ArqLib 2026: compact reading room and fully visible resource catalog. */
+body[data-page="library"] .library-banner-inner{padding-top:44px;padding-bottom:42px}
+body[data-page="library"] .library-hero-grid{grid-template-columns:minmax(0,1.5fr) minmax(165px,.5fr);gap:32px}
+body[data-page="library"] .library-banner h1{font-size:clamp(43px,5vw,68px);margin:12px 0 18px}
+body[data-page="library"] .library-banner .lead{font-size:14px;line-height:1.6}
+body[data-page="library"] .library-statline{margin-top:20px;padding-top:13px}
+body[data-page="library"] .feature-cover{width:min(100%,205px);max-width:205px}
+body[data-page="library"] .feature-cover-ribbon{right:-12px;bottom:9px;font-size:8px;padding:7px 9px}
+body[data-page="library"] .library-dynamic-hero{display:grid;grid-template-columns:145px minmax(0,1fr);gap:28px;align-items:center;background:#e8ece2;padding:20px 27px;min-width:0}
+body[data-page="library"] .library-dynamic-hero:empty{display:none}
+body[data-page="library"] .library-dynamic-img{width:100%;height:172px;background:#d8e2d5;overflow:hidden;display:grid;place-items:center}
+body[data-page="library"] .library-dynamic-img img{width:100%;height:100%;object-fit:contain;display:block}
+body[data-page="library"] .library-dynamic-hero h2{font-size:clamp(25px,3vw,37px);line-height:1.1;margin:7px 0}
+body[data-page="library"] .library-dynamic-hero p{font-size:12px;line-height:1.55;margin:0 0 12px;max-width:670px}
+body[data-page="library"] .library-dynamic-hero .button{min-height:36px;padding:8px 13px;font-size:11px}
+body[data-page="library"] .library-section{padding-top:48px;padding-bottom:75px}
+body[data-page="library"] .library-section-header h2{font-size:clamp(33px,3.8vw,49px);margin:6px 0 17px}
+body[data-page="library"] .library-section-header p{margin-bottom:17px}
+body[data-page="library"] .resource-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px 17px}
+body[data-page="library"] .resource-card{min-width:0}
+body[data-page="library"] .resource-cover-link{height:215px;aspect-ratio:auto;display:grid;place-items:center;padding:13px}
+body[data-page="library"] .resource-cover-link img{width:100%;height:100%;object-fit:contain}
+body[data-page="library"] .resource-card h3{font-size:21px;line-height:1.17;margin:7px 0}
+body[data-page="library"] .resource-meta{margin-top:11px;font-size:9px;letter-spacing:.04em}
+body[data-page="library"] .resource-description{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:11px}
+body[data-page="library"] .resource-creator{font-size:11px}
+@media(max-width:1050px){body[data-page="library"] .resource-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:800px){body[data-page="library"] .resource-grid{grid-template-columns:repeat(3,minmax(0,1fr))}body[data-page="library"] .library-hero-grid{grid-template-columns:minmax(0,1fr) 160px;gap:14px}body[data-page="library"] .feature-cover{max-width:155px}}
+@media(max-width:590px){body[data-page="library"] .library-banner-inner{padding-top:36px;padding-bottom:29px}body[data-page="library"] .library-hero-grid{display:flex;flex-direction:column;align-items:stretch}body[data-page="library"] .feature-cover{width:122px;max-width:122px;margin:0 auto}body[data-page="library"] .library-dynamic-hero{grid-template-columns:92px minmax(0,1fr);gap:15px;padding:14px}body[data-page="library"] .library-dynamic-img{height:119px}body[data-page="library"] .library-dynamic-hero h2{font-size:24px}body[data-page="library"] .library-dynamic-hero p{display:none}body[data-page="library"] .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}body[data-page="library"] .resource-cover-link{height:180px;padding:9px}body[data-page="library"] .resource-card h3{font-size:19px}body[data-page="library"] .library-section{padding-top:36px}}
