@@ -23,4 +23,30 @@ for(const el of document.querySelectorAll('[data-hero-media]')){
   }
   display(mode);
 }
+  // Public overrides come from admin-managed Supabase settings; static config remains fallback.
+  async function loadPublishedMedia(){
+    const publicCfg=window.ARQWELL_CONFIG||{};
+    if(!publicCfg.supabaseUrl||!publicCfg.supabasePublishableKey||!window.supabase?.createClient)return;
+    try{
+      const client=window.supabase.createClient(publicCfg.supabaseUrl,publicCfg.supabasePublishableKey);
+      const {data,error}=await client.from('arqwell_site_settings').select('setting_key,value').in('setting_key',['hero_media_home','hero_media_funding']);
+      if(error)throw error;
+      for(const row of data||[]){
+        const page=row.setting_key==='hero_media_home'?'home':'funding',node=document.querySelector('[data-hero-media="'+page+'"]');
+        if(!node||!row.value)continue;
+        const settings=row.value,photo=node.querySelector('.hero-photo'),vid=node.querySelector('.hero-video');
+        const source=vid?.querySelector('source');if(!photo||!vid||!source)continue;
+        const safe=s=>{if(typeof s!=='string')return '';if(/^assets\\/[a-z0-9_./-]+$/i.test(s))return s;try{const u=new URL(s,location.href);return u.protocol==='https:'?u.href:''}catch{return''}};
+        const image=safe(settings.image_url),video=safe(settings.video_url),poster=safe(settings.video_poster_url);
+        if(image)photo.src=image;
+        photo.alt=settings.alt||photo.alt;
+        if(poster)vid.poster=poster;else if(image)vid.poster=image;
+        const showVideo=settings.mode==='video'&&video&&!reduced;
+        if(showVideo){source.src=video;vid.load();photo.hidden=true;vid.hidden=false;vid.play().catch(()=>{vid.hidden=true;photo.hidden=false})}
+        else {vid.pause();vid.hidden=true;photo.hidden=false}
+      }
+    }catch(e){console.warn('Published media unavailable; using static defaults.',e)}
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',loadPublishedMedia);else loadPublishedMedia();
+
 })();
