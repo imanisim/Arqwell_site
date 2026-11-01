@@ -255,3 +255,53 @@ body[data-page="library"] .resource-creator{font-size:11px}
 @media(max-width:1050px){body[data-page="library"] .resource-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:800px){body[data-page="library"] .resource-grid{grid-template-columns:repeat(3,minmax(0,1fr))}body[data-page="library"] .library-hero-grid{grid-template-columns:minmax(0,1fr) 160px;gap:14px}body[data-page="library"] .feature-cover{max-width:155px}}
 @media(max-width:590px){body[data-page="library"] .library-banner-inner{padding-top:36px;padding-bottom:29px}body[data-page="library"] .library-hero-grid{display:flex;flex-direction:column;align-items:stretch}body[data-page="library"] .feature-cover{width:122px;max-width:122px;margin:0 auto}body[data-page="library"] .library-dynamic-hero{grid-template-columns:92px minmax(0,1fr);gap:15px;padding:14px}body[data-page="library"] .library-dynamic-img{height:119px}body[data-page="library"] .library-dynamic-hero h2{font-size:24px}body[data-page="library"] .library-dynamic-hero p{display:none}body[data-page="library"] .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}body[data-page="library"] .resource-cover-link{height:180px;padding:9px}body[data-page="library"] .resource-card h3{font-size:19px}body[data-page="library"] .library-section{padding-top:36px}}
+
+/* Funding page — generous content gutters, compact vertical rhythm, responsive desk. */
+body[data-page="funding"]{overflow-x:clip}
+body[data-page="funding"] main>.section,body[data-page="funding"] .funding-hero{width:100%}
+body[data-page="funding"] main .container{width:min(1120px,calc(100% - 96px));margin-left:auto;margin-right:auto;min-width:0}
+body[data-page="funding"] .funding-hero{min-height:460px;padding:65px 0 72px;display:flex;align-items:center}
+body[data-page="funding"] .funding-hero .container{max-width:1120px}
+body[data-page="funding"] .funding-hero h1{font-size:clamp(49px,6vw,78px);line-height:1.05;max-width:730px;margin:14px 0 20px}
+body[data-page="funding"] .funding-hero p.lead{font-size:15px;line-height:1.7;max-width:550px}
+body[data-page="funding"] .funding-hero-image{width:45%}
+body[data-page="funding"] .feature-one-intro,body[data-page="funding"] .expanded-funding-section,body[data-page="funding"] .plans-section{padding-top:65px;padding-bottom:75px}
+body[data-page="funding"] .funding-showcase-heading{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(20px,4vw,56px);align-items:end;margin:15px 0 26px}
+body[data-page="funding"] .funding-showcase-heading h2{font-size:clamp(37px,4.1vw,56px);line-height:1.08;margin:0}
+body[data-page="funding"] .funding-showcase-heading p{font-size:14px;line-height:1.7;margin:0}
+body[data-page="funding"] .featured-funding-host,body[data-page="funding"] .funding-full-host{min-width:0;width:100%;max-width:100%;margin-inline:auto}
+body[data-page="funding"] .aq-feature-banner{min-height:330px}
+body[data-page="funding"] .aq-feature-content{padding:clamp(26px,4vw,50px);max-width:740px}
+body[data-page="funding"] .aq-feature-content h2{font-size:clamp(32px,4.4vw,55px)}
+body[data-page="funding"] .funding-full-host{overflow:hidden}
+body[data-page="funding"] .funding-full-host .aqf{max-width:100%;min-width:0}
+body[data-page="funding"] .funding-full-host .aqf-view{height:380px}
+body[data-page="funding"] .plans-grid{gap:20px;margin-top:25px}
+body[data-page="funding"] .plan{min-width:0;padding:clamp(24px,3vw,36px);min-height:300px}
+body[data-page="funding"] .plan .price{font-size:clamp(31px,4vw,46px)}
+body[data-page="funding"] .plan .price small{font-size:17px}
+@media(max-width:800px){
+ body[data-page="funding"] main .container{width:calc(100% - 48px)}
+ body[data-page="funding"] .funding-hero{min-height:0;padding:64px 0}
+ body[data-page="funding"] .funding-hero-image{width:65%;opacity:.25}
+ body[data-page="funding"] .funding-showcase-heading{grid-template-columns:1fr;gap:14px}
+ body[data-page="funding"] .feature-one-intro,body[data-page="funding"] .expanded-funding-section,body[data-page="funding"] .plans-section{padding:52px 0}
+ body[data-page="funding"] .plans-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ body[data-page="funding"] main .container{width:calc(100% - 36px)}
+ body[data-page="funding"] .funding-hero{padding:52px 0}
+ body[data-page="funding"] .funding-hero h1{font-size:clamp(44px,10vw,58px)}
+ body[data-page="funding"] .funding-hero .cta-row{align-items:stretch;flex-direction:column}
+ body[data-page="funding"] .funding-hero .cta-row .button{width:100%}
+ body[data-page="funding"] .feature-one-intro,body[data-page="funding"] .expanded-funding-section,body[data-page="funding"] .plans-section{padding:43px 0}
+ body[data-page="funding"] .aq-feature-banner{min-height:290px}
+ body[data-page="funding"] .aq-feature-content{padding:23px 18px}
+ body[data-page="funding"] .aq-feature-content h2{font-size:32px}
+ body[data-page="funding"] .funding-full-host .aqf-head{display:none}
+ body[data-page="funding"] .funding-full-host .aqf-row{grid-template-columns:minmax(0,1fr);gap:3px;padding:12px 14px}
+ body[data-page="funding"] .funding-full-host .aqf-ad{flex-wrap:wrap}
+ body[data-page="funding"] .funding-full-host .aqf-thumb{width:95px;height:65px}
+ body[data-page="funding"] .funding-full-host .aqf-full-title{padding:18px}
+ body[data-page="funding"] .plan{padding:25px 20px}
+}
