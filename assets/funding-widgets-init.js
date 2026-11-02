@@ -2,14 +2,14 @@ import {mountFundingWidget,mountFeaturedFunding} from './funding-widget.js';
 const cfg=window.ARQWELL_CONFIG||{};
 const base={supabaseUrl:cfg.supabaseUrl||'',supabaseAnonKey:cfg.supabasePublishableKey||'',durationSeconds:85};
 async function start(){
- let tier2=false,accessToken=null;
+ let tier2=false,accessToken=null,member=false;
  if(window.supabase?.createClient&&base.supabaseUrl&&base.supabaseAnonKey){
-  try{const sb=window.supabase.createClient(base.supabaseUrl,base.supabaseAnonKey);const {data:{user}}=await sb.auth.getUser();if(user){
+  try{const sb=window.supabase.createClient(base.supabaseUrl,base.supabaseAnonKey);const {data:{user}}=await sb.auth.getUser();if(user){member=true;
    const {data:{session}}=await sb.auth.getSession();accessToken=session?.access_token||null;
    const {data:sub}=await sb.from('arqwell_subscriptions').select('tier,status,current_period_end').eq('user_id',user.id).maybeSingle();
    tier2=!!sub&&['tier_2','tier2','funding_paid'].includes(sub.tier)&&['active','trialing'].includes(sub.status)&&(!sub.current_period_end||new Date(sub.current_period_end)>new Date());
   }}catch(e){console.warn('Funding access remains free pending authorization',e)}}
- const settings={...base,accessToken,tier2};
+ const settings={...base,accessToken,tier2,member};
  if(document.querySelector('#arqwell-funding-home'))mountFundingWidget('#arqwell-funding-home',{...settings,variant:'embed',fundingUrl:'funding.html'});
  if(document.querySelector('#arqwell-funding-full'))mountFundingWidget('#arqwell-funding-full',{...settings,variant:'full',fundingUrl:'funding.html',membershipUrl:'register.html?interest=funding'});
  if(document.querySelector('#arqwell-featured-funding'))mountFeaturedFunding('#arqwell-featured-funding',settings);
